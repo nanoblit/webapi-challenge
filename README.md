@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+Endpoints and middlewares.
+
 - [ ] Describe Middleware?
+
+Middleware is a function which runs before or after an endpoint receives the request. It can be used for logging, validation, error handling etc.
 
 - [ ] Describe a Resource?
 
+Resource is the data returned by an endpoint.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+It can return a status code and an error within its body.
+
 - [ ] How can we partition our application into sub-applications?
+
+To do this we can use Router which allows to put different endpoints into their own files.
 
 ## Project Setup
 
