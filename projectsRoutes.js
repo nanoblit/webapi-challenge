@@ -10,14 +10,14 @@ route.get('/', async (req, res) => {
   }
 });
 
-// Why does it return server error when id is not in the database!?
 route.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const project = await db.get(id);
-    if (!project.name) {
+    const projects = await db.get();
+    if (!projects.find(project => project.id === Number(id))) {
       res.status(404).json({ error: 'There is no project with given id' });
     } else {
+      const project = await db.get(id);
       res.status(200).json(project);
     }
   } catch (error) {
